@@ -8,12 +8,16 @@
             do
             {
                 Console.WriteLine("Welcome to the Maths Operations Program!");
-                Console.WriteLine("Please enter two numbers:");
-                float num1 = float.Parse(Console.ReadLine());
-                float num2 = float.Parse(Console.ReadLine());
                 Console.WriteLine("Choose an operation: Add, Subtract, Multiply, Divide, Power, Average");
                 string operation = Console.ReadLine().ToLower();
-                float result = 0;
+                float num1 = 0, num2 = 0, result = 0;
+                if (operation != "average")
+                {
+                    Console.WriteLine("Please enter two numbers:");
+                    num1 = float.Parse(Console.ReadLine());
+                    num2 = float.Parse(Console.ReadLine());
+                    result = 0;
+                }
                 switch (operation)
                 {
                     case "add":
